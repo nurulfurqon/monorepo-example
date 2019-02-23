@@ -2,5 +2,14 @@
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "test": "lerna run test --scope={@monorepo-example/common,@monorepo-example/server}",
+    "new-version": "lerna version --conventional-commits --yes",
+    "diff": "lerna diff"
+  },
+  "devDependencies": {
+    "lerna": "^3.13.0"
+  },
+  "name": "monorepo-example"
 }
